@@ -59,7 +59,6 @@ const MyForm =
             </Grid>
             <Grid item md={6} xs={12}>
               <KeyboardDatePicker
-                clearable
                 id="age"
                 name="age"
                 format="MM/dd/yyyy"
