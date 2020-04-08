@@ -1,11 +1,8 @@
-import chai, { expect } from 'chai';
-import chaiEnzyme from 'chai-enzyme';
+import { expect } from 'chai';
 import Moment from 'moment';
 import Birthday from './Birthday';
 
-chai.use(chaiEnzyme());
-
-describe('Birthday tests', (): void => {
+describe('Birthday Tests', (): void => {
   describe('Smoke tests', (): void => {
     it('Should exist Birthday', (): void => {
       expect(Birthday).to.exist;
