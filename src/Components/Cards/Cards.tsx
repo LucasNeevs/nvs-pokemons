@@ -6,10 +6,10 @@ import {
 import { dataPokes } from './ICard';
 import useStyles from './Styles';
 import Moment from 'moment';
-import CheckBirthday from '../../Controllers/Birthday';
-import PokeCheck from '../../Controllers/PokeCheck';
-import CPCheck from '../../Controllers/CP';
-import TypeCheck from '../../Controllers/Type';
+import CheckBirthday from '../../Controllers/Birthday/Birthday';
+import PokeCheck from '../../Controllers/PokeCheck/PokeCheck';
+import CPCheck from '../../Controllers/CP/CP';
+import TypeCheck from '../../Controllers/Type/Type';
 
 export default (): React.ReactElement<HTMLElement> => {
   const classes = useStyles();
