@@ -84,8 +84,8 @@ const MyForm =
                 <Select
                   value={values.gender}
                   onChange={handleChange}
+                  label="Gender"
                   inputProps={{
-                    'aria-label': 'gender',
                     id: 'gender',
                     name: 'gender',
                   }}
@@ -110,8 +110,8 @@ const MyForm =
                 <Select
                   value={values.area}
                   onChange={handleChange}
+                  label="Area"
                   inputProps={{
-                    'aria-label': 'area',
                     id: 'area',
                     name: 'area',
                   }}
@@ -136,8 +136,8 @@ const MyForm =
                 <Select
                   value={values.pokemon}
                   onChange={handleChange}
+                  label="Pokemon"
                   inputProps={{
-                    'aria-label': 'pokemon',
                     id: 'pokemon',
                     name: 'pokemon',
                   }}
