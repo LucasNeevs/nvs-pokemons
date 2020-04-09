@@ -26,6 +26,7 @@ const MyForm =
     handleChange,
     handleBlur,
     handleSubmit,
+    handleReset,
     isSubmitting,
     setFieldValue,
   } = props;
@@ -41,7 +42,7 @@ const MyForm =
             justify="center"
             alignItems="center"
           >
-            <Grid item md={6} xs={12}>
+            <Grid item lg={4} md={6} xs={12}>
               <TextField 
                 id="name"
                 name="name"
@@ -57,24 +58,29 @@ const MyForm =
                 fullWidth
               />
             </Grid>
-            <Grid item md={6} xs={12}>
-              <KeyboardDatePicker
-                id="age"
-                name="age"
-                format="MM/dd/yyyy"
-                variant="inline"
+            <Grid item lg={4} md={6} xs={12}>
+              <FormControl
                 margin="dense"
-                value={values.age}
-                onChange={(value: any): void => {
-                  setFieldValue('age', value.toISOString());
-                }}
-                KeyboardButtonProps={{
-                  'aria-label': 'Age'
-                }}
+                variant="outlined"
                 fullWidth
-              />
-            </Grid>
-            <Grid item md={6} xs={12}>
+              >
+                <KeyboardDatePicker
+                  id="age"
+                  name="age"
+                  label="Age"
+                  format="MM/dd/yyyy"
+                  value={values.age}
+                  onChange={(value: any): void => {
+                    setFieldValue('age', value.toISOString());
+                  }}
+                  KeyboardButtonProps={{
+                    'aria-label': 'Age'
+                  }}
+                  fullWidth
+                />
+              </FormControl>
+            </Grid>          
+            <Grid item lg={4} md={6} xs={12}>
               <FormControl
                 margin="dense"
                 variant="outlined"
@@ -100,7 +106,7 @@ const MyForm =
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item md={6} xs={12}>
+            <Grid item lg={4} md={6} xs={12}>
               <FormControl
                 margin="dense"
                 variant="outlined"
@@ -125,8 +131,8 @@ const MyForm =
                   }
                 </Select>
               </FormControl>
-            </Grid>
-            <Grid item md={6} xs={12}>
+            </Grid>      
+            <Grid item lg={4} md={6} xs={12}>
               <FormControl
                 margin="dense"
                 variant="outlined"
@@ -155,7 +161,7 @@ const MyForm =
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item md={6} xs={12}>
+            <Grid item lg={2} md={3} xs={12}>
               <Button
                 variant="contained"
                 color="primary"
@@ -163,7 +169,17 @@ const MyForm =
                 disabled={isSubmitting}
                 fullWidth
               >
-                Create card
+                Create
+              </Button>
+            </Grid>
+            <Grid item lg={2} md={3} xs={12}>
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={handleReset}
+                fullWidth
+              >
+                Erase
               </Button>
             </Grid>
           </Grid>

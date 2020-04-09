@@ -20,7 +20,7 @@ export default (): React.ReactElement<HTMLElement> => {
     const rotulo = PokeCheck(state.pokemons[i]);
 
     rowPokes.push(
-      <Grid item md={3} xs={12}>
+      <Grid item lg={2} md={3} xs={12}>
         <Card className={classes.card}>
           <CardMedia
             className={classes.image}
@@ -30,7 +30,7 @@ export default (): React.ReactElement<HTMLElement> => {
           />
           <CardActionArea>
             <CardContent>
-              <Typography variant="h5" component="h2" gutterBottom>
+              <Typography variant="h5" component="h3" gutterBottom>
                 <b>Coach: </b>{state.names[i]}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
